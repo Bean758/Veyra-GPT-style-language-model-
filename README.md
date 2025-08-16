@@ -56,14 +56,6 @@ Generation:
   top_k: 50  
   repetition_penalty: 1.1  
 
-## 📂 Directory Layout  
-Veyra-GPT-style-language-model-/  
-│── Launcher.bat         # Quick start launcher (Windows)  
-│── Veyra.py             # Main training/inference script  
-│── Datasheet.txt        # Default Q/A dataset (~1700 entries)  
-│── requirements.txt     # Dependencies  
-│── README.md            # You are here  
-
 ## 📊 Training Sample  
 Epoch [1/1000] | Loss: 3.21 | Perplexity: 24.8  
 Epoch [2/1000] | Loss: 2.98 | Perplexity: 19.7  
