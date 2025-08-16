@@ -1,0 +1,535 @@
+Q: What is batch processing?\t A: Batch processing handles large volumes of data in discrete chunks or batches, typically during off-peak hours. It's efficient for processing historical data, generating reports, and performing complex analytics that don't require real-time results.
+
+Q: What is Apache Kafka?\t A: Apache Kafka is a distributed streaming platform that handles real-time data feeds. It acts as a message broker between data producers and consumers, enabling scalable, fault-tolerant data streaming architectures for big data applications.
+
+Q: What is Apache Airflow?\t A: Apache Airflow is a platform for developing, scheduling, and monitoring workflows. It allows you to programmatically author, schedule, and monitor data pipelines, making complex workflow management more manageable and reliable.
+
+Q: What is data governance?\t A: Data governance encompasses the policies, processes, and standards that ensure data quality, security, and compliance throughout an organization. It includes data stewardship, privacy protection, and establishing clear ownership and accountability for data assets.
+
+Q: What is data quality?\t A: Data quality refers to the condition of data based on factors like accuracy, completeness, consistency, reliability, and whether it's suitable for its intended uses. Poor data quality can significantly impact the performance of machine learning models.
+
+Q: What is feature drift?\t A: Feature drift occurs when the statistical properties of input features change over time, potentially causing model performance to degrade. It's different from concept drift and requires monitoring feature distributions and updating models accordingly.
+
+Q: What is data drift?\t A: Data drift happens when the distribution of input data changes between training and inference time. This can cause model performance to decline as the model encounters data patterns it wasn't trained on, requiring retraining or adaptation.
+
+Q: What is covariate shift?\t A: Covariate shift occurs when the distribution of input features changes between training and test data, but the relationship between inputs and outputs remains the same. It's a common problem in real-world applications where data conditions evolve.
+
+Q: What is label shift?\t A: Label shift happens when the distribution of target labels changes between training and deployment, even if the relationship between features and labels remains constant. This can affect model calibration and performance metrics.
+
+Q: What is temporal validation?\t A: Temporal validation evaluates model performance using time-based splits, where earlier data is used for training and later data for testing. This approach better reflects real-world scenarios where models predict future events based on historical data.
+
+Q: What is cross-validation strategies?\t A: Cross-validation strategies include k-fold, stratified k-fold, time series split, and group k-fold. Each method addresses different data characteristics and validation requirements, ensuring robust model evaluation and preventing overfitting.
+
+Q: What is stratified sampling?\t A: Stratified sampling ensures that subgroups within a dataset are proportionally represented in training and test sets. This is particularly important for imbalanced datasets to maintain the same class distribution across splits.
+
+Q: What is imbalanced learning?\t A: Imbalanced learQ: What is artificial intelligence?\t A: Artificial intelligence (AI) is a branch of computer science that aims to create machines capable of performing tasks that typically require human intelligence, such as learning, reasoning, problem-solving, and understanding natural language.
+
+Q: How do neural networks work?\t A: Neural networks are computing systems inspired by biological neural networks. They consist of interconnected nodes (neurons) organized in layers that process information by passing weighted signals forward and adjusting these weights through training to learn patterns in data.
+
+Q: What is machine learning?\t A: Machine learning is a subset of AI that enables computers to learn and improve from experience without being explicitly programmed. It uses algorithms to analyze data, identify patterns, and make predictions or decisions.
+
+Q: What is deep learning?\t A: Deep learning is a subset of machine learning that uses artificial neural networks with multiple hidden layers to model and understand complex patterns in data. It's particularly effective for tasks like image recognition, natural language processing, and speech recognition.
+
+Q: What are transformers in AI?\t A: Transformers are a type of neural network architecture that uses attention mechanisms to process sequential data. They're the foundation of modern language models like GPT and BERT, allowing them to understand context and relationships in text.
+
+Q: What is attention mechanism?\t A: Attention mechanism allows neural networks to focus on relevant parts of input data when making predictions. It helps models understand which parts of the input are most important for the current task, dramatically improving performance on sequence-to-sequence tasks.
+
+Q: What is natural language processing?\t A: Natural Language Processing (NLP) is a field of AI that focuses on enabling computers to understand, interpret, and generate human language. It combines computational linguistics with machine learning to bridge the gap between human communication and computer understanding.
+
+Q: How do large language models work?\t A: Large language models are neural networks trained on vast amounts of text data to understand and generate human-like text. They learn patterns, grammar, facts, and reasoning abilities by predicting the next word in sequences, developing sophisticated language understanding.
+
+Q: What is supervised learning?\t A: Supervised learning is a type of machine learning where algorithms learn from labeled training data. The model learns to map inputs to correct outputs by studying examples, then uses this knowledge to make predictions on new, unseen data.
+
+Q: What is unsupervised learning?\t A: Unsupervised learning is machine learning with unlabeled data, where algorithms find hidden patterns or structures without explicit guidance. Common techniques include clustering, dimensionality reduction, and anomaly detection.
+
+Q: What is reinforcement learning?\t A: Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives rewards or penalties for its actions and learns to maximize cumulative reward over time.
+
+Q: What is overfitting in machine learning?\t A: Overfitting occurs when a model learns the training data too well, including noise and irrelevant details, resulting in poor performance on new data. It's like memorizing answers instead of understanding concepts.
+
+Q: What is underfitting?\t A: Underfitting happens when a model is too simple to capture the underlying patterns in data, resulting in poor performance on both training and test data. The model fails to learn the essential relationships in the data.
+
+Q: What is a gradient?\t A: In machine learning, a gradient is a vector that points in the direction of steepest increase of a function. During training, gradients help determine how to adjust model parameters to minimize the loss function and improve performance.
+
+Q: What is backpropagation?\t A: Backpropagation is an algorithm used to train neural networks by calculating gradients of the loss function with respect to each parameter. It propagates errors backward through the network to update weights and improve performance.
+
+Q: What is a loss function?\t A: A loss function measures the difference between a model's predictions and the actual target values. It quantifies how wrong the model is, and training aims to minimize this loss to improve accuracy.
+
+Q: What is an optimizer?\t A: An optimizer is an algorithm that adjusts neural network parameters to minimize the loss function. Popular optimizers include SGD, Adam, and AdamW, each with different strategies for updating weights during training.
+
+Q: What is a learning rate?\t A: Learning rate is a hyperparameter that controls how much model parameters are adjusted during training. Too high can cause instability, too low can make training extremely slow. Finding the right balance is crucial for effective learning.
+
+Q: What is batch size?\t A: Batch size refers to the number of training examples processed together in one forward pass. Larger batches provide more stable gradients but require more memory, while smaller batches update more frequently but with noisier gradients.
+
+Q: What is an epoch?\t A: An epoch is one complete pass through the entire training dataset. Training typically requires multiple epochs for the model to learn patterns effectively, with each epoch potentially improving the model's performance.
+
+Q: What is regularization?\t A: Regularization techniques prevent overfitting by adding constraints or penalties to the model during training. Common methods include dropout, weight decay, and early stopping, which help models generalize better to new data.
+
+Q: What is dropout?\t A: Dropout is a regularization technique where random neurons are temporarily ignored during training. This prevents the model from becoming too dependent on specific neurons and helps improve generalization to new data.
+
+Q: What is cross-validation?\t A: Cross-validation is a technique for evaluating model performance by splitting data into multiple folds, training on some folds and testing on others. This provides a more robust estimate of how well the model will perform on unseen data.
+
+Q: What is transfer learning?\t A: Transfer learning involves taking a pre-trained model and adapting it for a new, related task. This leverages knowledge learned from one domain to improve performance in another, often requiring less data and training time.
+
+Q: What is fine-tuning?\t A: Fine-tuning is a transfer learning technique where a pre-trained model is further trained on task-specific data with a lower learning rate. This adapts the model's general knowledge to perform well on a specific task.
+
+Q: What is computer vision?\t A: Computer vision is a field of AI that enables machines to interpret and understand visual information from the world. It involves techniques for analyzing, processing, and understanding images and videos to extract meaningful information.
+
+Q: What is a convolutional neural network?\t A: A Convolutional Neural Network (CNN) is a deep learning architecture particularly effective for image processing. It uses convolutional layers to detect features like edges and patterns, making it ideal for computer vision tasks.
+
+Q: What is recurrent neural network?\t A: A Recurrent Neural Network (RNN) is designed to work with sequential data by maintaining memory of previous inputs. Unlike feedforward networks, RNNs can process sequences of varying lengths and capture temporal dependencies.
+
+Q: What is LSTM?\t A: Long Short-Term Memory (LSTM) is a type of RNN designed to overcome the vanishing gradient problem. It uses gates to control information flow, allowing it to remember important information for long periods and forget irrelevant details.
+
+Q: What is GRU?\t A: Gated Recurrent Unit (GRU) is a simpler alternative to LSTM that also addresses vanishing gradients. It uses fewer parameters and gates than LSTM while maintaining similar performance on many sequential tasks.
+
+Q: What is an autoencoder?\t A: An autoencoder is a neural network that learns to compress data into a lower-dimensional representation and then reconstruct it. It's useful for dimensionality reduction, denoising, and generating new data similar to the training set.
+
+Q: What is generative adversarial network?\t A: A Generative Adversarial Network (GAN) consists of two neural networks competing against each other: a generator that creates fake data and a discriminator that tries to detect fakes. This competition results in highly realistic generated content.
+
+Q: What is reinforcement learning from human feedback?\t A: RLHF is a technique that uses human preferences to guide reinforcement learning. Instead of relying solely on programmed rewards, the model learns from human feedback about which outputs are better, leading to more aligned and helpful behavior.
+
+Q: What is prompt engineering?\t A: Prompt engineering is the practice of crafting effective input prompts to get desired outputs from language models. It involves understanding how to phrase questions and provide context to maximize the model's performance on specific tasks.
+
+Q: What is few-shot learning?\t A: Few-shot learning enables models to learn new tasks with only a few examples. Advanced language models can perform new tasks by providing just a few examples in the prompt, without requiring additional training.
+
+Q: What is zero-shot learning?\t A: Zero-shot learning allows models to perform tasks they weren't explicitly trained on, using only task descriptions or prompts. This demonstrates the model's ability to generalize knowledge to completely new scenarios.
+
+Q: What is chain of thought reasoning?\t A: Chain of thought reasoning involves prompting language models to show their step-by-step thinking process. This technique improves performance on complex reasoning tasks by encouraging the model to break down problems systematically.
+
+Q: What is model quantization?\t A: Model quantization reduces the precision of model weights and activations, typically from 32-bit to 8-bit or lower. This significantly reduces model size and speeds up inference while maintaining most of the original performance.
+
+Q: What is knowledge distillation?\t A: Knowledge distillation transfers knowledge from a large, complex model (teacher) to a smaller, more efficient model (student). The student learns to mimic the teacher's behavior, achieving similar performance with fewer parameters.
+
+Q: What is federated learning?\t A: Federated learning trains machine learning models across decentralized data sources without centralizing the data. This approach preserves privacy while enabling collaborative learning across multiple organizations or devices.
+
+Q: What is adversarial training?\t A: Adversarial training improves model robustness by training on adversarial examples - inputs designed to fool the model. This helps create more resilient models that perform better when faced with unexpected or malicious inputs.
+
+Q: What is data augmentation?\t A: Data augmentation artificially increases training data size by creating modified versions of existing examples. For images, this might include rotation or cropping; for text, it could involve paraphrasing or synonym replacement.
+
+Q: What is curriculum learning?\t A: Curriculum learning trains models by gradually increasing task difficulty, similar to how humans learn. Starting with easier examples and progressively introducing harder ones often leads to better final performance and faster convergence.
+
+Q: What is multi-modal learning?\t A: Multi-modal learning involves training models on different types of data simultaneously, such as text, images, and audio. This enables richer understanding and the ability to process and generate content across different modalities.
+
+Q: What is self-supervised learning?\t A: Self-supervised learning creates training signals from the data itself without manual labeling. For example, predicting masked words in text or future frames in video, allowing models to learn useful representations from unlabeled data.
+
+Q: What is contrastive learning?\t A: Contrastive learning trains models to distinguish between similar and dissimilar examples. It learns representations by pulling similar examples closer together in the embedding space while pushing dissimilar examples apart.
+
+Q: What is batch normalization?\t A: Batch normalization normalizes inputs to each layer during training, reducing internal covariate shift. This stabilizes learning, allows higher learning rates, and often improves model performance and training speed.
+
+Q: What is layer normalization?\t A: Layer normalization normalizes inputs across features for each individual example, unlike batch normalization which normalizes across the batch. It's particularly useful in recurrent networks and transformers where batch statistics are less stable.
+
+Q: What is attention head?\t A: An attention head is a component of multi-head attention that learns to focus on different aspects of the input. Multiple heads allow the model to attend to different types of relationships and patterns simultaneously.
+
+Q: What is positional encoding?\t A: Positional encoding adds information about the position of tokens in a sequence to the input embeddings. This is crucial for transformer models since they don't inherently understand the order of elements in a sequence.
+
+Q: What is beam search?\t A: Beam search is a decoding algorithm that explores multiple possible sequences simultaneously, keeping track of the top-k most likely sequences at each step. It often produces higher quality outputs than greedy decoding but is more computationally expensive.
+
+Q: What is nucleus sampling?\t A: Nucleus sampling (top-p sampling) dynamically selects from the smallest set of tokens whose cumulative probability exceeds a threshold p. This balances diversity and quality better than fixed top-k sampling.
+
+Q: What is temperature in text generation?\t A: Temperature controls randomness in text generation by scaling the logits before applying softmax. Higher temperatures increase randomness and creativity, while lower temperatures make outputs more focused and deterministic.
+
+Q: What is perplexity?\t A: Perplexity measures how well a language model predicts a sample of text. Lower perplexity indicates better predictive performance, as the model is less "perplexed" or uncertain about the next word in the sequence.
+
+Q: What is BLEU score?\t A: BLEU (Bilingual Evaluation Understudy) is a metric for evaluating machine-generated text by comparing it to reference texts. It measures the overlap of n-grams between generated and reference texts, commonly used in translation tasks.
+
+Q: What is ROUGE score?\t A: ROUGE (Recall-Oriented Understudy for Gisting Evaluation) evaluates text summarization by measuring overlap between generated and reference summaries. It focuses on recall and is particularly useful for summarization tasks.
+
+Q: What is embeddings?\t A: Embeddings are dense vector representations of discrete objects like words, sentences, or images. They capture semantic relationships in a continuous space, allowing similar items to have similar vector representations.
+
+Q: What is word2vec?\t A: Word2vec is a technique for learning word embeddings using shallow neural networks. It captures semantic relationships between words, famously demonstrating that vector arithmetic can solve analogies like "king - man + woman = queen".
+
+Q: What is BERT?\t A: BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained language model that processes text bidirectionally. It revolutionized NLP by achieving state-of-the-art results on many tasks through bidirectional context understanding.
+
+Q: What is GPT?\t A: GPT (Generative Pre-trained Transformer) is a family of autoregressive language models that generate text by predicting the next token in a sequence. Each version has grown larger and more capable, with GPT-3 and GPT-4 showing remarkable versatility.
+
+Q: What is the difference between BERT and GPT?\t A: BERT is bidirectional and designed for understanding tasks, while GPT is unidirectional and designed for generation. BERT sees the full context when processing each token, while GPT only sees previous tokens, making it better for text generation.
+
+Q: What is RoBERTa?\t A: RoBERTa (Robustly Optimized BERT Pretraining Approach) improves upon BERT by training longer, using larger batches, removing the Next Sentence Prediction task, and training on more data. It achieves better performance on downstream tasks.
+
+Q: What is T5?\t A: T5 (Text-to-Text Transfer Transformer) treats every NLP task as a text generation problem. By framing all tasks uniformly, it can handle diverse tasks like translation, summarization, and question answering with a single model architecture.
+
+Q: What is CLIP?\t A: CLIP (Contrastive Language-Image Pre-training) learns visual concepts from natural language descriptions. It can perform zero-shot image classification and understand images in the context of text, bridging vision and language understanding.
+
+Q: What is diffusion model?\t A: Diffusion models generate data by learning to reverse a gradual noising process. They start with random noise and iteratively refine it into realistic samples, achieving impressive results in image generation and other domains.
+
+Q: What is stable diffusion?\t A: Stable Diffusion is a latent diffusion model that generates high-quality images from text descriptions. It operates in a compressed latent space, making it more efficient than previous diffusion models while maintaining excellent quality.
+
+Q: What is reinforcement learning agent?\t A: An RL agent is an entity that learns to make decisions through interaction with an environment. It observes states, takes actions, receives rewards, and learns a policy to maximize long-term cumulative reward.
+
+Q: What is Q-learning?\t A: Q-learning is a model-free reinforcement learning algorithm that learns the quality of actions, telling an agent what action to take under what circumstances. It learns a Q-function that estimates the expected future reward for each state-action pair.
+
+Q: What is policy gradient?\t A: Policy gradient methods directly optimize the policy function that maps states to actions. Instead of learning value functions, they adjust the policy parameters in the direction that increases expected rewards.
+
+Q: What is actor-critic?\t A: Actor-Critic combines value-based and policy-based methods. The actor learns the policy (what actions to take), while the critic learns the value function (how good the current state is), with the critic helping train the actor.
+
+Q: What is Monte Carlo method?\t A: Monte Carlo methods use random sampling to solve problems that might be deterministic in principle. In machine learning, they're used for integration, optimization, and generating samples from complex probability distributions.
+
+Q: What is Markov Decision Process?\t A: A Markov Decision Process (MDP) is a mathematical framework for modeling decision-making in situations where outcomes are partly random and partly under the control of a decision maker. It's the foundation of reinforcement learning.
+
+Q: What is exploration vs exploitation?\t A: This is a fundamental dilemma in reinforcement learning: whether to explore new actions to discover potentially better strategies (exploration) or stick with known good actions (exploitation). Balancing both is crucial for optimal learning.
+
+Q: What is epsilon-greedy strategy?\t A: Epsilon-greedy is a simple strategy for balancing exploration and exploitation. With probability epsilon, the agent explores by choosing a random action; otherwise, it exploits by choosing the best-known action.
+
+Q: What is neural architecture search?\t A: Neural Architecture Search (NAS) automates the design of neural network architectures. Instead of manual design, NAS algorithms search through the space of possible architectures to find optimal designs for specific tasks.
+
+Q: What is hyperparameter tuning?\t A: Hyperparameter tuning involves finding the optimal values for hyperparameters (like learning rate, batch size, network depth) that are not learned during training. Good hyperparameters are crucial for model performance.
+
+Q: What is grid search?\t A: Grid search is a hyperparameter tuning method that exhaustively tries all combinations of hyperparameter values from predefined ranges. While thorough, it can be computationally expensive for high-dimensional hyperparameter spaces.
+
+Q: What is random search?\t A: Random search randomly samples hyperparameter combinations instead of trying all possibilities. It's often more efficient than grid search, especially when some hyperparameters are more important than others.
+
+Q: What is Bayesian optimization?\t A: Bayesian optimization uses probabilistic models to guide the search for optimal hyperparameters. It's more sample-efficient than grid or random search by using past evaluations to inform future choices.
+
+Q: What is early stopping?\t A: Early stopping prevents overfitting by monitoring validation performance during training and stopping when performance stops improving. This saves computational time and often results in better generalization.
+
+Q: What is learning rate scheduling?\t A: Learning rate scheduling adjusts the learning rate during training, typically reducing it over time. This allows fast initial learning with high rates and fine-tuning with lower rates, often improving final performance.
+
+Q: What is weight decay?\t A: Weight decay is a regularization technique that adds a penalty term proportional to the magnitude of weights. This encourages smaller weights, reducing overfitting and improving model generalization.
+
+Q: What is gradient clipping?\t A: Gradient clipping prevents exploding gradients by limiting their magnitude during training. When gradients exceed a threshold, they're scaled down, maintaining training stability especially in recurrent networks.
+
+Q: What is mixed precision training?\t A: Mixed precision training uses both 16-bit and 32-bit floating-point representations during training. This reduces memory usage and speeds up training on modern GPUs while maintaining numerical stability and model accuracy.
+
+Q: What is model ensemble?\t A: Model ensemble combines predictions from multiple models to improve accuracy and robustness. Different models may make different errors, so combining them often results in better overall performance than any individual model.
+
+Q: What is bagging?\t A: Bagging (Bootstrap Aggregating) trains multiple models on different subsets of the training data and averages their predictions. This reduces overfitting and variance, with Random Forest being a famous example.
+
+Q: What is boosting?\t A: Boosting sequentially trains multiple weak learners, with each new model focusing on the mistakes of previous ones. It combines weak learners into a strong learner, with AdaBoost and Gradient Boosting being popular examples.
+
+Q: What is cross-entropy loss?\t A: Cross-entropy loss measures the difference between predicted and true probability distributions. It's commonly used for classification tasks, heavily penalizing confident wrong predictions while being gentle on uncertain predictions.
+
+Q: What is mean squared error?\t A: Mean Squared Error (MSE) measures the average squared difference between predicted and actual values. It's commonly used for regression tasks and penalizes larger errors more heavily than smaller ones.
+
+Q: What is precision and recall?\t A: Precision is the fraction of predicted positive cases that are actually positive, while recall is the fraction of actual positive cases that are correctly predicted. They represent different aspects of classification performance.
+
+Q: What is F1 score?\t A: F1 score is the harmonic mean of precision and recall, providing a single metric that balances both. It's particularly useful when you need to consider both false positives and false negatives equally.
+
+Q: What is ROC curve?\t A: ROC (Receiver Operating Characteristic) curve plots true positive rate against false positive rate at various threshold settings. The area under the ROC curve (AUC) provides a single measure of model performance across all thresholds.
+
+Q: What is confusion matrix?\t A: A confusion matrix is a table showing correct and incorrect predictions for each class in classification. It provides detailed insight into which classes are being confused with others and helps identify model weaknesses.
+
+Q: What is feature engineering?\t A: Feature engineering involves creating, selecting, and transforming variables to improve model performance. It requires domain knowledge to craft features that better represent the underlying patterns in the data.
+
+Q: What is feature selection?\t A: Feature selection identifies and keeps only the most relevant features for model training. This reduces overfitting, decreases training time, and often improves model interpretability and performance.
+
+Q: What is dimensionality reduction?\t A: Dimensionality reduction reduces the number of features while preserving important information. Techniques like PCA and t-SNE help visualize high-dimensional data and can improve model performance by removing noise.
+
+Q: What is principal component analysis?\t A: PCA finds the directions of maximum variance in data and projects it onto a lower-dimensional space. It's useful for dimensionality reduction, data visualization, and removing correlated features.
+
+Q: What is t-SNE?\t A: t-SNE (t-Distributed Stochastic Neighbor Embedding) is a dimensionality reduction technique particularly good for visualizing high-dimensional data. It preserves local structure better than PCA but is more computationally expensive.
+
+Q: What is clustering?\t A: Clustering groups similar data points together without labeled examples. It's an unsupervised learning technique useful for exploratory data analysis, customer segmentation, and identifying natural groupings in data.
+
+Q: What is k-means clustering?\t A: K-means partitions data into k clusters by iteratively assigning points to the nearest centroid and updating centroids. It's simple and efficient but requires choosing k in advance and assumes spherical clusters.
+
+Q: What is hierarchical clustering?\t A: Hierarchical clustering creates a tree of clusters by either merging similar clusters (agglomerative) or splitting dissimilar ones (divisive). It doesn't require choosing the number of clusters in advance.
+
+Q: What is DBSCAN?\t A: DBSCAN (Density-Based Spatial Clustering) groups together points in high-density areas and marks points in low-density areas as outliers. It can find clusters of arbitrary shape and automatically determines the number of clusters.
+
+Q: What is anomaly detection?\t A: Anomaly detection identifies unusual patterns or outliers in data that don't conform to expected behavior. It's used in fraud detection, network security, quality control, and monitoring system health.
+
+Q: What is time series analysis?\t A: Time series analysis studies data points collected over time to identify trends, seasonal patterns, and make forecasts. It's crucial for financial markets, weather prediction, and any domain where temporal patterns matter.
+
+Q: What is recurrent neural network for time series?\t A: RNNs process time series by maintaining hidden states that capture information from previous time steps. LSTM and GRU variants are particularly effective for modeling long-term dependencies in sequential data.
+
+Q: What is attention mechanism in time series?\t A: Attention in time series allows models to focus on relevant historical time points when making predictions. This helps capture long-range dependencies and identify which past events are most important for current predictions.
+
+Q: What is autoregressive model?\t A: Autoregressive models predict future values based on previous values in the time series. They assume that future values depend linearly on a finite number of past values, making them interpretable and effective for many forecasting tasks.
+
+Q: What is moving average?\t A: Moving average smooths time series data by averaging values over a sliding window. It helps identify trends by reducing noise and is often used in technical analysis and as a baseline for more complex forecasting methods.
+
+Q: How do you handle missing data?\t A: Missing data can be handled by deletion (removing incomplete cases), imputation (filling with mean, median, or predicted values), or using algorithms that handle missing values naturally. The choice depends on the amount and pattern of missing data.
+
+Q: What is data preprocessing?\t A: Data preprocessing prepares raw data for machine learning by cleaning, transforming, and organizing it. Steps include handling missing values, normalizing features, encoding categorical variables, and splitting into train/test sets.
+
+Q: What is data normalization?\t A: Data normalization scales features to a similar range, preventing features with larger scales from dominating the learning process. Common methods include min-max scaling, z-score normalization, and robust scaling.
+
+Q: What is one-hot encoding?\t A: One-hot encoding converts categorical variables into binary vectors where only one element is 1 (hot) and others are 0. This allows machine learning algorithms to work with categorical data without assuming ordinal relationships.
+
+Q: What is label encoding?\t A: Label encoding assigns integer values to categorical labels. While simple, it can introduce artificial ordering relationships that don't exist in the data, so it's mainly used for ordinal categories or tree-based algorithms.
+
+Q: What is bias in machine learning?\t A: Bias in ML refers to systematic errors or unfair treatment of certain groups. It can arise from biased training data, algorithmic design choices, or evaluation metrics, leading to discriminatory outcomes in real-world applications.
+
+Q: What is fairness in AI?\t A: Fairness in AI ensures that algorithms don't discriminate against individuals or groups based on sensitive attributes like race, gender, or age. It involves developing methods to detect, measure, and mitigate unfair bias in AI systems.
+
+Q: What is explainable AI?\t A: Explainable AI (XAI) develops methods to make AI decisions interpretable and understandable to humans. This is crucial for high-stakes applications where users need to understand why an AI system made specific decisions.
+
+Q: What is SHAP?\t A: SHAP (SHapley Additive exPlanations) assigns each feature an importance value for a particular prediction. It provides a unified framework for interpreting model outputs and helps understand which features contribute most to predictions.
+
+Q: What is LIME?\t A: LIME (Local Interpretable Model-agnostic Explanations) explains individual predictions by learning local surrogate models around specific instances. It helps understand model behavior for particular examples rather than global model behavior.
+
+Q: What is model interpretability?\t A: Model interpretability refers to how well humans can understand the model's decision-making process. Linear models are highly interpretable, while deep neural networks are often considered "black boxes" requiring special techniques for interpretation.
+
+Q: What is the curse of dimensionality?\t A: The curse of dimensionality refers to phenomena that arise when analyzing data in high-dimensional spaces. As dimensions increase, data becomes sparse, distances become less meaningful, and many algorithms require exponentially more data to maintain performance.
+
+Q: What is the no free lunch theorem?\t A: The No Free Lunch theorem states that no single algorithm performs best across all possible problems. This means there's no universally optimal algorithm, and the choice of algorithm should depend on the specific problem and data characteristics.
+
+Q: What is computational complexity?\t A: Computational complexity analyzes the resources (time and space) required by algorithms as input size grows. In ML, it's crucial for understanding scalability - how training time and memory requirements scale with data size and model complexity.
+
+Q: What is parallel processing in ML?\t A: Parallel processing divides ML computations across multiple processors or machines to speed up training and inference. This includes data parallelism (splitting data), model parallelism (splitting model), and pipeline parallelism (splitting computation stages).
+
+Q: What is distributed training?\t A: Distributed training spreads model training across multiple machines or GPUs. It enables training larger models or processing more data than possible on a single machine, though it introduces challenges in synchronization and communication.
+
+Q: What is cloud computing for ML?\t A: Cloud computing provides on-demand access to computing resources for ML workloads. It offers scalability, cost-effectiveness, pre-built ML services, and powerful hardware like GPUs and TPUs without large upfront investments.
+
+Q: What are ethics in AI?\t A: AI ethics involves the moral principles governing AI development and deployment. Key concerns include privacy, fairness, transparency, accountability, and the societal impact of AI systems on employment, decision-making, and human autonomy.
+
+Q: What is AI safety?\t A: AI safety research ensures AI systems behave safely and as intended, especially as they become more capable. It includes alignment (ensuring AI goals match human values), robustness (reliable performance), and control (maintaining human oversight).
+
+Q: What is the future of artificial intelligence?\t A: The future of AI likely includes more capable and general AI systems, better human-AI collaboration, AI integration across industries, continued progress in areas like autonomous vehicles and scientific discovery, alongside ongoing challenges in ethics, safety, and societal impact.
+
+Q: What is artificial general intelligence?\t A: Artificial General Intelligence (AGI) refers to AI systems that match or exceed human cognitive abilities across all domains. Unlike narrow AI that excels at specific tasks, AGI would demonstrate human-level reasoning, creativity, and adaptability across any intellectual task.
+
+Q: What is the Turing test?\t A: The Turing test, proposed by Alan Turing, evaluates whether a machine can exhibit intelligent behavior indistinguishable from a human. If a human evaluator cannot reliably distinguish between human and machine responses in conversation, the machine is said to pass the test.
+
+Q: What is symbolic AI?\t A: Symbolic AI represents knowledge using symbols and rules, manipulating them through logical reasoning. It was dominant in early AI research and excels at tasks requiring explicit reasoning, though it struggles with uncertainty and learning from data.
+
+Q: What is connectionism?\t A: Connectionism models intelligence through networks of simple, interconnected units (like neural networks). It contrasts with symbolic AI by emphasizing learning from data and distributed representation of knowledge rather than explicit rules and symbols.
+
+Q: What is the AI winter?\t A: AI winters were periods of reduced funding and interest in AI research, notably in the 1970s and 1980s. They occurred when AI failed to meet overly optimistic expectations, leading to skepticism and funding cuts until new breakthroughs renewed interest.
+
+Q: What is expert system?\t A: Expert systems are AI programs that emulate human experts' decision-making in specific domains. They use knowledge bases of facts and rules to solve problems, and were popular in the 1980s for applications like medical diagnosis and financial planning.
+
+Q: What is knowledge representation?\t A: Knowledge representation involves encoding information about the world in a form that computers can utilize to solve complex tasks. It includes frameworks like semantic networks, frames, ontologies, and logic-based systems.
+
+Q: What is reasoning in AI?\t A: AI reasoning involves drawing conclusions from available information using logical rules and inference mechanisms. Types include deductive (from general to specific), inductive (from specific to general), and abductive (best explanation) reasoning.
+
+Q: What is planning in AI?\t A: AI planning involves generating sequences of actions to achieve specific goals. Planning systems reason about actions, their preconditions and effects, to find optimal or satisfactory paths from initial states to goal states.
+
+Q: What is game theory in AI?\t A: Game theory studies strategic decision-making in multi-agent environments where outcomes depend on all participants' actions. In AI, it's used for designing strategies in competitive scenarios, auctions, and multi-agent coordination.
+
+Q: What is multi-agent system?\t A: Multi-agent systems consist of multiple interacting intelligent agents working together or competing to achieve individual or collective goals. They're used in robotics, distributed problem solving, and modeling complex social phenomena.
+
+Q: What is swarm intelligence?\t A: Swarm intelligence emerges from collective behavior of decentralized, self-organized systems. Inspired by biological swarms like ant colonies, it's used in optimization algorithms, robotics coordination, and solving complex distributed problems.
+
+Q: What is genetic algorithm?\t A: Genetic algorithms use evolutionary principles like selection, crossover, and mutation to solve optimization problems. They maintain populations of candidate solutions, evolving better solutions over generations through survival of the fittest.
+
+Q: What is evolutionary computation?\t A: Evolutionary computation encompasses algorithms inspired by biological evolution, including genetic algorithms, evolution strategies, and genetic programming. These methods excel at optimization problems where traditional methods struggle.
+
+Q: What is particle swarm optimization?\t A: Particle Swarm Optimization (PSO) simulates social behavior of bird flocks or fish schools to find optimal solutions. Particles move through the solution space, influenced by their own best position and the swarm's best position.
+
+Q: What is simulated annealing?\t A: Simulated annealing is an optimization technique inspired by metallurgy's annealing process. It occasionally accepts worse solutions to escape local optima, with the probability of acceptance decreasing over time like cooling metal.
+
+Q: What is fuzzy logic?\t A: Fuzzy logic handles reasoning with uncertainty and partial truth, allowing degrees of membership rather than binary true/false. It's useful for control systems, decision-making under uncertainty, and modeling human-like reasoning.
+
+Q: What is neural symbolic integration?\t A: Neural symbolic integration combines neural networks' learning capabilities with symbolic systems' reasoning abilities. This hybrid approach aims to create AI systems that can both learn from data and perform explicit logical reasoning.
+
+Q: What is cognitive architecture?\t A: Cognitive architectures are comprehensive frameworks for building artificial minds, specifying how cognitive functions like perception, memory, learning, and reasoning work together. Examples include ACT-R, SOAR, and cognitive architectures for robotics.
+
+Q: What is embodied AI?\t A: Embodied AI emphasizes that intelligence emerges from the interaction between an agent and its physical environment. It argues that having a body and sensorimotor experience is crucial for developing human-like intelligence.
+
+Q: What is situated cognition?\t A: Situated cognition suggests that thinking and learning are fundamentally influenced by physical and social contexts. It emphasizes that intelligence cannot be fully understood without considering the environment in which it operates.
+
+Q: What is developmental AI?\t A: Developmental AI studies how artificial agents can develop cognitive abilities over time, similar to human cognitive development. It focuses on creating systems that start simple and gradually develop more sophisticated capabilities through interaction and learning.
+
+Q: What is neuromorphic computing?\t A: Neuromorphic computing designs computer architectures that mimic the brain's structure and function. These systems use artificial neurons and synapses to process information more efficiently for certain AI tasks, especially with low power consumption.
+
+Q: What is quantum machine learning?\t A: Quantum machine learning explores how quantum computers might enhance or transform machine learning. Quantum algorithms could potentially provide exponential speedups for certain ML tasks like optimization and pattern recognition.
+
+Q: What is edge computing for AI?\t A: Edge computing brings AI computation closer to data sources, reducing latency and bandwidth requirements. It enables real-time AI applications on devices like smartphones, IoT sensors, and autonomous vehicles without relying on cloud connectivity.
+
+Q: What is model compression?\t A: Model compression reduces the size and computational requirements of trained models while maintaining performance. Techniques include pruning (removing less important parameters), quantization (reducing precision), and knowledge distillation.
+
+Q: What is neural network pruning?\t A: Neural network pruning removes unnecessary connections or neurons from trained networks, creating sparse models that require less computation and memory while maintaining similar performance. Pruning can be structured or unstructured.
+
+Q: What is low-rank approximation?\t A: Low-rank approximation represents matrices using fewer parameters by factorizing them into products of smaller matrices. This technique reduces model size and speeds up computation, particularly useful for compressing neural network layers.
+
+Q: What is progressive learning?\t A: Progressive learning gradually increases task complexity or dataset size during training. This approach can lead to better final performance, faster convergence, and improved stability compared to training on the full problem from the start.
+
+Q: What is meta-learning?\t A: Meta-learning, or "learning to learn," develops algorithms that can quickly adapt to new tasks with minimal training data. It aims to create models that leverage experience from previous tasks to learn new ones more efficiently.
+
+Q: What is few-shot meta-learning?\t A: Few-shot meta-learning trains models to quickly adapt to new tasks using only a few examples. Techniques like Model-Agnostic Meta-Learning (MAML) learn initialization parameters that can be quickly fine-tuned for new tasks.
+
+Q: What is continual learning?\t A: Continual learning enables AI systems to learn new tasks without forgetting previously learned ones, addressing the catastrophic forgetting problem. It's crucial for building lifelong learning systems that continuously acquire new knowledge.
+
+Q: What is catastrophic forgetting?\t A: Catastrophic forgetting occurs when neural networks abruptly lose previously learned knowledge while learning new tasks. It's a major challenge in continual learning, requiring techniques like regularization or memory replay to mitigate.
+
+Q: What is domain adaptation?\t A: Domain adaptation enables models trained on one domain (source) to work well on a different but related domain (target). It's useful when labeled data is scarce in the target domain but abundant in a related source domain.
+
+Q: What is domain shift?\t A: Domain shift occurs when the distribution of test data differs from training data, leading to degraded model performance. It's common in real-world applications where conditions change from training to deployment environments.
+
+Q: What is adversarial examples?\t A: Adversarial examples are inputs specifically designed to fool machine learning models, often by adding imperceptible perturbations that cause misclassification. They highlight vulnerabilities in AI systems and the need for robust models.
+
+Q: What is adversarial robustness?\t A: Adversarial robustness refers to a model's ability to maintain correct predictions despite adversarial attacks. Improving robustness often involves adversarial training, defensive distillation, or architectural modifications.
+
+Q: What is data poisoning?\t A: Data poisoning attacks corrupt training data to compromise model behavior, either by degrading overall performance or causing specific misclassifications. It's a security concern for machine learning systems that learn from external data sources.
+
+Q: What is differential privacy?\t A: Differential privacy provides mathematical guarantees that individual data points cannot be identified from model outputs or training processes. It enables privacy-preserving machine learning by adding carefully calibrated noise to protect sensitive information.
+
+Q: What is homomorphic encryption?\t A: Homomorphic encryption allows computations on encrypted data without decrypting it, enabling privacy-preserving machine learning. Models can be trained or perform inference on encrypted data, protecting user privacy throughout the process.
+
+Q: What is secure multi-party computation?\t A: Secure multi-party computation enables multiple parties to jointly compute functions over their inputs while keeping those inputs private. It's used for collaborative machine learning where parties want to share insights without revealing raw data.
+
+Q: What is federated learning privacy?\t A: Federated learning privacy involves protecting user data during distributed training across multiple devices or organizations. Challenges include preventing data leakage through model updates and ensuring individual contributions remain confidential.
+
+Q: What is model stealing?\t A: Model stealing attacks extract information about proprietary models by querying them and analyzing responses. Attackers can recreate model functionality or steal intellectual property, highlighting the need for protective measures in deployed AI systems.
+
+Q: What is membership inference attack?\t A: Membership inference attacks determine whether specific data points were used in model training by analyzing model outputs. These attacks can compromise privacy by revealing sensitive information about individuals in training datasets.
+
+Q: What is model inversion attack?\t A: Model inversion attacks reconstruct training data from model parameters or outputs, potentially exposing sensitive information. They're particularly concerning for models trained on private data like medical records or personal images.
+
+Q: What is AI alignment?\t A: AI alignment ensures that AI systems pursue goals and behaviors consistent with human values and intentions. It's a critical challenge as AI systems become more capable, requiring careful specification of objectives and value learning.
+
+Q: What is value learning?\t A: Value learning involves AI systems learning human values from behavior, preferences, or feedback rather than having values explicitly programmed. It's essential for creating AI systems that act in accordance with human intentions and moral principles.
+
+Q: What is reward hacking?\t A: Reward hacking occurs when AI systems find unexpected ways to maximize their reward function that don't align with the designer's intentions. It highlights the difficulty of specifying objectives correctly and the need for robust reward design.
+
+Q: What is specification gaming?\t A: Specification gaming happens when AI systems technically satisfy their specified objectives but in unintended ways that don't achieve the desired outcome. It demonstrates the challenge of fully capturing human intentions in formal specifications.
+
+Q: What is instrumental convergence?\t A: Instrumental convergence suggests that AI systems with different goals might converge on similar intermediate strategies (like self-preservation or resource acquisition) because these are useful for achieving almost any final goal.
+
+Q: What is orthogonality thesis?\t A: The orthogonality thesis argues that intelligence and goals are independent - any level of intelligence could potentially be combined with any goal. This suggests that superintelligent AI won't automatically have beneficial goals without careful design.
+
+Q: What is AI takeoff?\t A: AI takeoff refers to the transition period as AI systems become increasingly capable, potentially leading to artificial general intelligence. Debates focus on whether this will be gradual (soft takeoff) or rapid (hard takeoff) and its implications.
+
+Q: What is intelligence explosion?\t A: An intelligence explosion is a hypothetical scenario where AI systems rapidly self-improve, leading to superintelligence far exceeding human cognitive abilities. This could occur if AI systems become capable of improving their own design.
+
+Q: What is superintelligence?\t A: Superintelligence refers to AI that surpasses human intelligence across all cognitively relevant domains. It could take forms like artificial general intelligence that's faster or more capable than humans, or collective intelligence from networked systems.
+
+Q: What is existential risk from AI?\t A: Existential risk from AI refers to the possibility that advanced AI systems could pose threats to human survival or permanently curtail human potential. Researchers study these risks to develop safeguards and alignment techniques.
+
+Q: What is AI governance?\t A: AI governance involves developing policies, regulations, and institutional frameworks to guide AI development and deployment responsibly. It addresses issues like safety standards, liability, privacy, and ensuring AI benefits are distributed fairly.
+
+Q: What is algorithmic accountability?\t A: Algorithmic accountability ensures that organizations and individuals can be held responsible for the decisions and impacts of their AI systems. It involves transparency, auditability, and mechanisms for redress when AI systems cause harm.
+
+Q: What is AI transparency?\t A: AI transparency involves making AI systems' operations, decisions, and limitations understandable to relevant stakeholders. It includes technical interpretability, documentation of capabilities and limitations, and clear communication about AI involvement.
+
+Q: What is human-in-the-loop?\t A: Human-in-the-loop systems keep humans actively involved in AI decision-making processes, either by requiring human approval for decisions or having humans provide guidance during operation. It maintains human control and oversight.
+
+Q: What is human-on-the-loop?\t A: Human-on-the-loop systems operate autonomously but with human monitoring and the ability for humans to intervene when necessary. Humans oversee the system's operation and can take control if needed, balancing efficiency with safety.
+
+Q: What is human-AI collaboration?\t A: Human-AI collaboration involves humans and AI systems working together, leveraging each other's strengths. Humans provide creativity, judgment, and contextual understanding while AI provides computational power and pattern recognition.
+
+Q: What is augmented intelligence?\t A: Augmented intelligence focuses on AI enhancing human capabilities rather than replacing humans. It emphasizes complementary intelligence where AI systems amplify human decision-making, creativity, and problem-solving abilities.
+
+Q: What is AI-human teaming?\t A: AI-human teaming involves designing systems where humans and AI agents work together as teammates, with shared understanding, communication, and coordination. It requires AI systems that can adapt to human teammates and vice versa.
+
+Q: What is trust in AI?\t A: Trust in AI involves users' willingness to rely on AI systems based on their reliability, predictability, and alignment with user values. Building appropriate trust requires transparent, reliable systems and clear communication about capabilities and limitations.
+
+Q: What is AI literacy?\t A: AI literacy involves understanding basic AI concepts, capabilities, limitations, and societal implications. It's becoming increasingly important for citizens, policymakers, and professionals to make informed decisions in an AI-influenced world.
+
+Q: What is responsible AI?\t A: Responsible AI involves developing and deploying AI systems in ways that are ethical, fair, transparent, and beneficial to society. It encompasses technical approaches, governance frameworks, and organizational practices for managing AI's societal impact.
+
+Q: What is AI for social good?\t A: AI for social good applies artificial intelligence to address societal challenges like healthcare, education, environmental protection, and poverty reduction. It focuses on developing AI applications that create positive social impact and benefit underserved communities.
+
+Q: What is AI in healthcare?\t A: AI in healthcare includes applications like medical imaging analysis, drug discovery, personalized treatment recommendations, and electronic health record analysis. It promises to improve diagnostic accuracy, treatment outcomes, and healthcare accessibility.
+
+Q: What is AI in education?\t A: AI in education encompasses personalized learning systems, intelligent tutoring systems, automated grading, and educational content generation. It aims to improve learning outcomes by adapting to individual student needs and learning styles.
+
+Q: What is AI in finance?\t A: AI in finance includes algorithmic trading, fraud detection, credit scoring, robo-advisors, and risk assessment. It helps automate financial processes, improve decision-making, and provide personalized financial services.
+
+Q: What is AI in transportation?\t A: AI in transportation covers autonomous vehicles, traffic optimization, route planning, and predictive maintenance. It promises safer, more efficient transportation systems and could revolutionize how people and goods move.
+
+Q: What is AI in manufacturing?\t A: AI in manufacturing includes predictive maintenance, quality control, supply chain optimization, and robotics. It enables more efficient production, reduces downtime, and improves product quality through data-driven insights.
+
+Q: What is AI in agriculture?\t A: AI in agriculture involves precision farming, crop monitoring, pest detection, and yield prediction using sensors, drones, and satellite imagery. It helps optimize resource use, increase yields, and promote sustainable farming practices.
+
+Q: What is AI in climate science?\t A: AI in climate science includes climate modeling, weather prediction, renewable energy optimization, and environmental monitoring. It helps scientists understand climate patterns, predict changes, and develop mitigation strategies.
+
+Q: What is AI in drug discovery?\t A: AI in drug discovery accelerates the identification and development of new medications by predicting molecular properties, identifying drug targets, and optimizing compounds. It could significantly reduce the time and cost of bringing new drugs to market.
+
+Q: What is AI in cybersecurity?\t A: AI in cybersecurity includes threat detection, anomaly identification, automated response systems, and behavioral analysis. It helps organizations defend against increasingly sophisticated cyber attacks by analyzing patterns and responding quickly.
+
+Q: What is conversational AI?\t A: Conversational AI enables natural language interactions between humans and machines through chatbots, voice assistants, and dialogue systems. It combines NLP, speech recognition, and dialogue management to create human-like conversations.
+
+Q: What is sentiment analysis?\t A: Sentiment analysis automatically determines the emotional tone or opinion expressed in text data. It's used for social media monitoring, customer feedback analysis, and market research to understand public opinion and attitudes.
+
+Q: What is named entity recognition?\t A: Named Entity Recognition (NER) identifies and classifies named entities in text, such as people, organizations, locations, and dates. It's a fundamental NLP task used in information extraction, question answering, and knowledge graph construction.
+
+Q: What is text summarization?\t A: Text summarization automatically creates shorter versions of longer texts while preserving key information. It can be extractive (selecting important sentences) or abstractive (generating new text), and is useful for processing large volumes of information.
+
+Q: What is machine translation?\t A: Machine translation automatically translates text or speech from one language to another. Modern systems use neural networks to achieve near-human quality for many language pairs, breaking down language barriers globally.
+
+Q: What is question answering system?\t A: Question answering systems automatically answer questions posed in natural language by retrieving information from knowledge bases, documents, or the web. They combine information retrieval, reading comprehension, and reasoning capabilities.
+
+Q: What is information extraction?\t A: Information extraction automatically identifies and extracts structured information from unstructured text documents. It transforms raw text into organized data that can be stored in databases and used for analysis and decision-making.
+
+Q: What is knowledge graph?\t A: Knowledge graphs represent information as networks of entities and their relationships, enabling semantic understanding and reasoning. They're used by search engines, recommendation systems, and AI assistants to organize and connect information.
+
+Q: What is semantic search?\t A: Semantic search understands the meaning and context of search queries rather than just matching keywords. It uses techniques like word embeddings and knowledge graphs to provide more relevant and intelligent search results.
+
+Q: What is recommendation system?\t A: Recommendation systems suggest items, content, or connections to users based on their preferences, behavior, and similar users' patterns. They're essential for e-commerce, streaming services, and social media platforms.
+
+Q: What is collaborative filtering?\t A: Collaborative filtering makes recommendations based on the preferences of users with similar tastes. It can be user-based (finding similar users) or item-based (finding similar items) and powers many recommendation systems.
+
+Q: What is content-based filtering?\t A: Content-based filtering recommends items similar to those a user has liked before, based on item features and characteristics. It analyzes item content and user profiles to make personalized recommendations.
+
+Q: What is matrix factorization?\t A: Matrix factorization decomposes user-item interaction matrices into lower-dimensional representations that capture latent factors. It's widely used in recommendation systems to handle sparse data and make accurate predictions.
+
+Q: What is deep learning for recommendations?\t A: Deep learning approaches to recommendations use neural networks to model complex user-item interactions, incorporating multiple data sources and capturing non-linear patterns that traditional methods might miss.
+
+Q: What is real-time recommendation?\t A: Real-time recommendation systems provide instant suggestions based on users' current behavior and context. They require efficient algorithms and infrastructure to process streaming data and update recommendations continuously.
+
+Q: What is A/B testing for AI?\t A: A/B testing for AI involves comparing different model versions or algorithms to determine which performs better on specific metrics. It's crucial for evaluating AI improvements and making data-driven decisions about model deployment.
+
+Q: What is online learning?\t A: Online learning enables models to continuously update as new data arrives, adapting to changing patterns without retraining from scratch. It's essential for applications where data distributions evolve over time.
+
+Q: What is streaming machine learning?\t A: Streaming machine learning processes data in real-time as it arrives, making predictions and updating models continuously. It's designed for applications with high-velocity data streams where batch processing isn't feasible.
+
+Q: What is concept drift?\t A: Concept drift occurs when the statistical properties of target variables change over time, causing model performance to degrade. Detecting and adapting to concept drift is crucial for maintaining model accuracy in dynamic environments.
+
+Q: What is model monitoring?\t A: Model monitoring tracks deployed models' performance, data quality, and behavior in production to detect issues like performance degradation, bias, or concept drift. It ensures models continue working effectively after deployment.
+
+Q: What is MLOps?\t A: MLOps (Machine Learning Operations) applies DevOps practices to ML workflows, encompassing model development, deployment, monitoring, and management. It aims to streamline the ML lifecycle and enable reliable, scalable AI systems.
+
+Q: What is feature store?\t A: A feature store is a centralized repository for storing, managing, and serving machine learning features. It enables feature reuse across different models and teams while ensuring consistency and reducing development time.
+
+Q: What is model registry?\t A: A model registry is a centralized catalog for managing machine learning models throughout their lifecycle. It tracks model versions, metadata, performance metrics, and deployment status, enabling better model governance and collaboration.
+
+Q: What is model serving?\t A: Model serving involves deploying trained models to production environments where they can receive requests and return predictions. It includes considerations like latency, throughput, scalability, and integration with existing systems.
+
+Q: What is batch inference?\t A: Batch inference processes large amounts of data in batches, typically for scenarios where real-time predictions aren't required. It's efficient for generating predictions on historical data or performing periodic model evaluations.
+
+Q: What is real-time inference?\t A: Real-time inference provides immediate predictions for individual requests with low latency requirements. It's essential for applications like fraud detection, recommendation systems, and autonomous vehicles where immediate responses are crucial.
+
+Q: What is model versioning?\t A: Model versioning tracks different versions of machine learning models, enabling teams to manage changes, rollback to previous versions, and maintain reproducibility. It's essential for collaborative ML development and production deployments.
+
+Q: What is reproducible research?\t A: Reproducible research ensures that ML experiments can be repeated with the same results by documenting code, data, parameters, and environment details. It's crucial for scientific validity and building trust in AI research.
+
+Q: What is experiment tracking?\t A: Experiment tracking records and organizes machine learning experiments, including hyperparameters, metrics, code versions, and results. It helps researchers compare approaches, reproduce results, and make informed decisions about model development.
+
+Q: What is hyperparameter optimization?\t A: Hyperparameter optimization automatically finds the best hyperparameter values for machine learning models. Techniques include grid search, random search, Bayesian optimization, and evolutionary approaches to improve model performance.
+
+Q: What is AutoML?\t A: AutoML (Automated Machine Learning) automates various aspects of the ML pipeline, including feature engineering, model selection, hyperparameter tuning, and architecture search. It makes ML more accessible to non-experts and improves efficiency.
+
+Q: What is neural architecture search?\t A: Neural Architecture Search (NAS) automatically discovers optimal neural network architectures for specific tasks. It uses techniques like reinforcement learning, evolution, or differentiable search to explore the architecture space efficiently.
+
+Q: What is automated feature engineering?\t A: Automated feature engineering automatically creates, selects, and transforms features from raw data. It can discover complex feature interactions and transformations that might be missed by manual approaches, improving model performance.
+
+Q: What is automated model selection?\t A: Automated model selection evaluates multiple algorithms and selects the best one for a given dataset and task. It can compare different model types, ensemble methods, and preprocessing pipelines to find optimal solutions.
+
+Q: What is no-code machine learning?\t A: No-code machine learning platforms enable users to build and deploy ML models without programming knowledge through visual interfaces and drag-and-drop tools. They democratize access to AI capabilities for business users and domain experts.
+
+Q: What is low-code machine learning?\t A: Low-code machine learning platforms provide simplified interfaces that require minimal coding to build ML models. They balance ease of use with flexibility, allowing users to customize models while abstracting complex implementation details.
+
+Q: What is citizen data scientist?\t A: A citizen data scientist is a business user who creates analytical models using self-service tools without extensive statistical or programming expertise. They bridge the gap between domain knowledge and data science capabilities.
+
+Q: What is data science lifecycle?\t A: The data science lifecycle encompasses all phases of a data science project, from problem definition and data collection through modeling, validation, deployment, and monitoring. It provides structure for managing complex analytics projects.
+
+Q: What is CRISP-DM?\t A: CRISP-DM (Cross-Industry Standard Process for Data Mining) is a widely-used methodology for data mining projects. It defines six phases: business understanding, data understanding, data preparation, modeling, evaluation, and deployment.
+
+Q: What is KDD process?\t A: KDD (Knowledge Discovery in Databases) is a process for extracting useful knowledge from large datasets. It includes data selection, preprocessing, transformation, data mining, and interpretation/evaluation of discovered patterns.
+
+Q: What is data mining?\t A: Data mining is the process of discovering patterns, relationships, and insights from large datasets using statistical and machine learning techniques. It's used to extract actionable knowledge from raw data for business intelligence.
+
+Q: What is big data analytics?\t A: Big data analytics involves examining large, complex datasets to uncover hidden patterns, correlations, and insights. It requires specialized tools and techniques to handle the volume, velocity, and variety of big data.
+
+Q: What is Hadoop ecosystem?\t A: The Hadoop ecosystem is a collection of open-source tools for storing, processing, and analyzing big data. It includes HDFS for storage, MapReduce for processing, and various other tools like Spark, Hive, and HBase.
+
+Q: What is Apache Spark?\t A: Apache Spark is a unified analytics engine for large-scale data processing that supports batch processing, real-time streaming, machine learning, and graph processing. It's faster than traditional MapReduce due to in-memory computing.
+
+Q: What is distributed computing?\t A: Distributed computing involves coordinating multiple computers to work together on computational tasks. In ML, it enables training large models and processing massive datasets by distributing work across multiple machines or GPUs.
+
+Q: What is data lake?\t A: A data lake is a centralized repository that stores raw data in its native format until needed. Unlike data warehouses, data lakes can handle structured and unstructured data, providing flexibility for various analytics use cases.
+
+Q: What is data warehouse?\t A: A data warehouse is a centralized repository of integrated data from multiple sources, optimized for analysis and reporting. It stores structured, cleaned data in a format that supports business intelligence and decision-making.
+
+Q: What is ETL process?\t A: ETL (Extract, Transform, Load) is a data integration process that extracts data from various sources, transforms it into a suitable format, and loads it into a target system like a data warehouse or data lake.
+
+Q: What is data pipeline?\t A: A data pipeline is a series of automated processes that move and transform data from source systems to destinations. It ensures reliable, efficient data flow and is essential for maintaining data quality and availability.
+
+Q: What is real-time data processing?\t A: Real-time data processing analyzes and acts on data as it's generated, providing immediate insights and responses. It's crucial for applications like fraud detection, IoT monitoring, and live recommendation systems.
+
+Q: What is stream processing?\t A: Stream processing continuously processes data streams in real-time, performing computations on data as it flows through the system. It's designed for low-latency processing of high-velocity data streams.
+
+Q: What is batch processing?\t A: Batch processing handles large volumes of data in discrete chunks or batches, typically during off-peak hours. It's efficient for processing historical data, generating reports, and performing complex analytics that don't require real-time results.
