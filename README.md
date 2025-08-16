@@ -11,7 +11,7 @@ Veyra is a **Python GPT-style transformer** you can train to reply however you w
 - ⚡ Advanced transformer features (RoPE, GQA, SwiGLU, Flash Attention, RMSNorm)  
 
 > **Requires a GPU to train.**
-
+ 
 ## ✨ Features  
 - Configurable Transformer architecture  
 - SwiGLU activation, RMSNorm, RoPE, GQA, Flash Attention simulation  
